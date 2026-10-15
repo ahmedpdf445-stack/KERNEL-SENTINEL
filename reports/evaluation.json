@@ -1,0 +1,71 @@
+{
+  "buckets_per_scenario": 180,
+  "label_policy": "only scenario_label='anomaly' is positive; labels never enter detection",
+  "scenarios": {
+    "benign": {
+      "alert_count": 0,
+      "detection_delay_seconds": null,
+      "dropped_events": 0,
+      "false_negative_rate": 0.0,
+      "false_negatives": 0,
+      "false_positive_rate": 0.0,
+      "false_positives": 0,
+      "malformed_records": 0,
+      "negative_events": 893,
+      "positive_events": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "true_negatives": 893,
+      "true_positives": 0
+    },
+    "burst": {
+      "alert_count": 4,
+      "detection_delay_seconds": 119.0,
+      "dropped_events": 0,
+      "false_negative_rate": 0.9719101123595506,
+      "false_negatives": 1903,
+      "false_positive_rate": 0.0,
+      "false_positives": 0,
+      "malformed_records": 0,
+      "negative_events": 303,
+      "positive_events": 1958,
+      "precision": 1.0,
+      "recall": 0.028089887640449437,
+      "true_negatives": 303,
+      "true_positives": 55
+    },
+    "changing": {
+      "alert_count": 1,
+      "detection_delay_seconds": null,
+      "dropped_events": 0,
+      "false_negative_rate": 0.0,
+      "false_negatives": 0,
+      "false_positive_rate": 0.0016835016835016834,
+      "false_positives": 2,
+      "malformed_records": 0,
+      "negative_events": 1188,
+      "positive_events": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "true_negatives": 1186,
+      "true_positives": 0
+    },
+    "suspicious": {
+      "alert_count": 6,
+      "detection_delay_seconds": 55.0,
+      "dropped_events": 0,
+      "false_negative_rate": 0.9628359062321327,
+      "false_negatives": 1684,
+      "false_positive_rate": 0.0,
+      "false_positives": 0,
+      "malformed_records": 0,
+      "negative_events": 314,
+      "positive_events": 1749,
+      "precision": 1.0,
+      "recall": 0.037164093767867355,
+      "true_negatives": 314,
+      "true_positives": 65
+    }
+  },
+  "seed": 4242
+}

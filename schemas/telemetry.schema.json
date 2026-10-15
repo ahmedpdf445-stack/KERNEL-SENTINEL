@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/kernel-sentinel/telemetry.schema.json",
+  "title": "Kernel Sentinel simulated JSON Lines record",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": ["record_type", "event_id", "timestamp", "event_type", "process_id", "parent_process_id", "process_name", "source"],
+      "properties": {
+        "record_type": {"const": "event"},
+        "event_id": {"type": "string", "minLength": 1, "maxLength": 256},
+        "timestamp": {"type": "string", "format": "date-time"},
+        "event_type": {"enum": ["process_start", "process_exec", "file_access", "network_connect", "process_exit"]},
+        "process_id": {"type": "integer", "minimum": 0},
+        "parent_process_id": {"type": ["integer", "null"], "minimum": 0},
+        "process_name": {"type": "string", "minLength": 1, "maxLength": 256},
+        "source": {"const": "simulated"},
+        "scenario_label": {"type": ["string", "null"], "maxLength": 128}
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": ["record_type", "timestamp", "dropped_count", "source", "reason"],
+      "properties": {
+        "record_type": {"const": "loss_report"},
+        "timestamp": {"type": "string", "format": "date-time"},
+        "dropped_count": {"type": "integer", "minimum": 1},
+        "source": {"const": "simulated"},
+        "reason": {"type": "string", "minLength": 1, "maxLength": 256}
+      },
+      "additionalProperties": false
+    }
+  ]
+}

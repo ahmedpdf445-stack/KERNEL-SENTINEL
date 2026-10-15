@@ -1,0 +1,4 @@
+{"event_id":"fixture-root","event_type":"process_start","parent_process_id":null,"process_id":1000,"process_name":"sentinel-root.exe","record_type":"event","scenario_label":"benign","source":"simulated","timestamp":"2025-01-01T00:00:00Z"}
+{"event_id":"fixture-child","event_type":"process_start","parent_process_id":1000,"process_id":1001,"process_name":"sentinel-worker.exe","record_type":"event","scenario_label":"benign","source":"simulated","timestamp":"2025-01-01T00:00:01Z"}
+{"event_id":"fixture-file","event_type":"file_access","parent_process_id":1000,"process_id":1001,"process_name":"sentinel-worker.exe","record_type":"event","scenario_label":"benign","source":"simulated","timestamp":"2025-01-01T00:00:05Z"}
+{"event_id":"fixture-net","event_type":"network_connect","parent_process_id":1000,"process_id":1001,"process_name":"sentinel-worker.exe","record_type":"event","scenario_label":"benign","source":"simulated","timestamp":"2025-01-01T00:00:08Z"}
